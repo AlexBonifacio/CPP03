@@ -1,0 +1,38 @@
+#include <iostream>
+#include "ClapTrap.hpp"
+
+int main( void )
+{
+	ClapTrap clap("Clappy");
+	clap.attack("trappy");
+	clap.beRepaired(2);
+	clap.takeDamage(4);
+	clap.takeDamage(4);
+	clap.beRepaired(2);
+	clap.takeDamage(4);
+	clap.getHitPoints();
+
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+
+	std::cout << std::endl;
+	clap.getHitPoints();
+	clap.getEnergyPoints();
+	std::cout << std::endl;
+
+	clap.beRepaired(2);
+	clap.beRepaired(2);
+	std::cout << std::endl;
+	
+	clap.getHitPoints();
+	clap.getEnergyPoints();
+
+	clap.takeDamage(4);
+
+	return 0;
+}

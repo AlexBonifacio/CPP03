@@ -1,0 +1,5 @@
+
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -pendatic -std=c++98 -MMD -MP
+
+SRCS = main.cpp ClapTrap.cpp

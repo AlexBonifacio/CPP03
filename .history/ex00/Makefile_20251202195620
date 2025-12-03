@@ -1,0 +1,18 @@
+
+CXX = c++
+CXXFLAGS = -Wall -Wextra -Werror -pendatic -std=c++98 -MMD -MP
+
+SRCS = main.cpp ClapTrap.cpp
+OBJDIR = obj
+OBJS = $(patsubst %.cpp,$(OBJDIR)/%.o,$(SRCS))
+DEP = $(OBJS:.o=.d)
+
+NAME = a.out
+
+all : $(NAME)
+
+$(NAME) : $(OBJS) Makefile
+	$(CXX) $(OBJS) -o $(NAME)
+
+$(OBJDIR)
+	mkdir -p $(OBJDIR)
