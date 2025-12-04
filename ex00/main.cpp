@@ -4,6 +4,7 @@
 int main( void )
 {
 	ClapTrap clap("Clappy");
+
 	clap.attack("trappy");
 	clap.beRepaired(2);
 	clap.takeDamage(4);
@@ -36,6 +37,21 @@ int main( void )
 	clap.getEnergyPoints();
 
 	clap.takeDamage(4);
+
+	std::cout << std::endl;
+
+	ClapTrap a;
+	std::cout << "a = clap -> ";
+	a = clap;
+
+	a.getHitPoints();
+	std::cout << std::endl;
+
+	ClapTrap b(a);
+	std::cout << "b = clap -> ";
+	b = clap;
+	b.getHitPoints();
+	std::cout << std::endl;
 
 	return 0;
 }

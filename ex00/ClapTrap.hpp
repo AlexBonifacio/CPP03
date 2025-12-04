@@ -21,10 +21,10 @@ class ClapTrap {
 		unsigned int	getEnergyPoints() const;
 
 	private:
-		std::string	_name;
-		unsigned int			_hit_points;
-		unsigned int			_energy_points;
-		unsigned int			_attack_damage;
+		std::string		_name;
+		unsigned int	_hit_points;
+		unsigned int	_energy_points;
+		unsigned int	_attack_damage;
 };
 
 #endif // CLAPTRAP_HPP

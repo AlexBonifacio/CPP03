@@ -8,7 +8,11 @@ int main( void )
 	std::cout << '\n';
 	ScavTrap scav("Scavvy");
 	std::cout << '\n';
+
+	ScavTrap *scav2 = new(ScavTrap);
 	
+	scav2->attack("a");
+
 	ScavTrap x = scav;
 	std::cout << '\n';
 
