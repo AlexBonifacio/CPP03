@@ -1,0 +1,10 @@
+#include "FragTrap.hpp"
+#include <iostream>
+
+FragTrap::FragTrap(const std::string& name)
+	: ClapTrap(name)
+{
+	_hit_points = 100;
+	
+	std::cout << "Constructor FragTrap called for " << _name << '\n';
+}
