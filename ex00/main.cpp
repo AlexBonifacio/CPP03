@@ -6,13 +6,14 @@ int main( void )
 	ClapTrap clap("Clappy");
 
 	clap.attack("trappy");
-	clap.beRepaired(2);
-	clap.takeDamage(4);
+	clap.beRepaired(-1);
+	clap.getHitPoints();
+	clap.takeDamage(0);
 	clap.takeDamage(4);
 	// clap.beRepaired(2);
 	clap.takeDamage(4);
 	clap.takeDamage(4);
-	clap.takeDamage(4);
+	clap.takeDamage(-1);
 
 	clap.getHitPoints();
 
@@ -38,19 +39,6 @@ int main( void )
 
 	clap.takeDamage(4);
 
-	std::cout << std::endl;
-
-	ClapTrap a;
-	std::cout << "a = clap -> ";
-	a = clap;
-
-	a.getHitPoints();
-	std::cout << std::endl;
-
-	ClapTrap b(a);
-	std::cout << "b = clap -> ";
-	b = clap;
-	b.getHitPoints();
 	std::cout << std::endl;
 
 	return 0;

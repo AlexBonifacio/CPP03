@@ -3,12 +3,12 @@
 #include <iostream>
 
 ClapTrap::ClapTrap()
-	: _name("Default"),
+	: _name("DefaultClap"),
 		_hit_points(10),
 		_energy_points(10),
 		_attack_damage(0)
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "ClapTrap default constructor called\n";
 }
 
 ClapTrap::ClapTrap(const std::string& name) 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(const std::string& name)
 		_energy_points(10), 
 		_attack_damage(0)
 {
-	std::cout << "Clap constructor called for " << _name << '\n';
+	std::cout << "ClapTrap param constructor called for " << _name << '\n';
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
@@ -44,7 +44,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor called for " << _name << '\n';
+	std::cout << "ClapTrap Destructor called for " << _name << '\n';
 }
 
 void	ClapTrap::attack(const std::string& target)
@@ -83,18 +83,19 @@ void	ClapTrap::beRepaired(unsigned int amount)
 			<< " has no more hit points\n";
 		return ;
 	}
+	
 	_hit_points = _hit_points + amount;
-	if (_hit_points > 14)
+	std::cout << "ClapTrap " << _name 
+				<< " repairs itself"
+				<< ", restoring " << amount 
+				<< " points of life!\n";
+	
+	_energy_points--;
+	if (_hit_points > 14 || amount > 14)
 	{
 		_hit_points = 14;
-		std::cout << "Max hit points(20) reached for ClapTrap " << _name << "!\n";
+		std::cout << "Max hit points(14) reached for ClapTrap " << _name << "!\n";
 	}
-	_energy_points--;
-
-	std::cout << "ClapTrap " << _name 
-			<< " repairs itself"
-			<< ", restoring " << amount 
-			<< " points of life!\n";
 }
 
 void	ClapTrap::takeDamage(unsigned int amount)

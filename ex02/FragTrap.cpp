@@ -18,18 +18,18 @@ FragTrap::FragTrap()
 	_energy_points = 100;
 	_attack_damage = 30;
 
-	std::cout << "Default construcot FragTrap called for " << _name << '\n';
+	std::cout << "FragTrap default constructor called for " << _name << '\n';
 }
 
 FragTrap::FragTrap(const FragTrap& copy)
 	: ClapTrap(copy)
 {
-	std::cout << "Copy constructor FragTrap called for " << _name << '\n';
+	std::cout << "FragTrap copy constructor called for " << _name << '\n';
 }
 
 FragTrap::~FragTrap()
 {
-	std::cout << "Destructor FragTrap called for " << _name << '\n';
+	std::cout << "FragTrap destructor called for " << _name << '\n';
 }
 
 FragTrap&	FragTrap::operator=(const FragTrap& other)

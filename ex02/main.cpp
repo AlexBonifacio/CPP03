@@ -5,6 +5,17 @@
 
 int main( void )
 {
+	{
+		FragTrap fragga;
+		fragga.getEnergyPoints();
+		fragga.getHitPoints();
+		fragga.beRepaired(-1);
+		fragga.takeDamage(-1);
+		fragga.attack("random");
+		fragga.getHitPoints();
+	}
+	std::cout << '\n';
+
 	ClapTrap clap("Clappy");
 	std::cout << '\n';
 	FragTrap frag("Fraggy");

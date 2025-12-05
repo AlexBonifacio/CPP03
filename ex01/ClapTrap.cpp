@@ -8,7 +8,7 @@ ClapTrap::ClapTrap()
 		_energy_points(10),
 		_attack_damage(0)
 {
-	std::cout << "Default constructor called\n";
+	std::cout << "ClapTrap default constructor called\n";
 }
 
 ClapTrap::ClapTrap(const std::string& name) 
@@ -17,7 +17,7 @@ ClapTrap::ClapTrap(const std::string& name)
 		_energy_points(10), 
 		_attack_damage(0)
 {
-	std::cout << "Clap constructor called for " << _name << '\n';
+	std::cout << "ClapTrap param constructor called for " << _name << '\n';
 }
 
 ClapTrap::ClapTrap(const ClapTrap &other)
@@ -83,17 +83,19 @@ void	ClapTrap::beRepaired(unsigned int amount)
 			<< " has no more hit points\n";
 		return ;
 	}
+	
 	_hit_points = _hit_points + amount;
+	std::cout << "ClapTrap " << _name 
+				<< " repairs itself"
+				<< ", restoring " << amount 
+				<< " points of life!\n";
+	
 	_energy_points--;
 
-	std::cout << "ClapTrap " << _name 
-			<< " repairs itself"
-			<< ", restoring " << amount 
-			<< " points of life!\n";
-	if (_hit_points > 20)
+	if (_hit_points > 200 || amount > 200)
 	{
-		_hit_points = 20;
-		std::cout << "Max hit points(20) reached for ClapTrap " << _name << "!\n";
+		_hit_points = 200;
+		std::cout << "Max hit points(200) reached for ClapTrap " << _name << "!\n";
 	}
 }
 

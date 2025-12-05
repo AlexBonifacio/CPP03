@@ -4,6 +4,13 @@
 
 int main( void )
 {
+	{
+		ScavTrap scava;
+		scava.getEnergyPoints();
+		scava.getHitPoints();
+	}
+	std::cout << '\n';
+
 	ClapTrap clap("Clappy");
 	std::cout << '\n';
 	ScavTrap scav("Scavvy");
@@ -21,8 +28,8 @@ int main( void )
 
 	std::cout << '\n';
 	scav.attack("Clappy");
-	scav.beRepaired(50);
-	scav.takeDamage(75);
+	scav.beRepaired(-1);
+	scav.takeDamage(-1);
 	scav.getHitPoints();
 	std::cout << '\n';
 
