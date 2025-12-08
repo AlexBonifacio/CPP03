@@ -16,15 +16,15 @@ int main( void )
 	ScavTrap scav("Scavvy");
 	std::cout << '\n';
 
-	ScavTrap *scav2 = new(ScavTrap);
-	
-	scav2->attack("a");
+	// ScavTrap *scav2 = new(ScavTrap);
+	// scav2->attack("a");
+	// delete scav2;
 
-	ScavTrap x = scav;
-	std::cout << '\n';
-
-	ScavTrap a(x);
-	x.getEnergyPoints();
+	// ScavTrap x = scav;
+	// std::cout << '\n';
+	// ScavTrap a(x);
+	// x.getEnergyPoints();
+	// std::cout << '\n';
 
 	std::cout << '\n';
 	scav.attack("Clappy");
@@ -35,6 +35,8 @@ int main( void )
 
 	scav.attack("Clappy");
 	scav.guardGate();
+	std::cout << '\n';
+
 	std::cout << '\n';
 
 	return 0;
