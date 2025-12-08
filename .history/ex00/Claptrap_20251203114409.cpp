@@ -1,4 +1,0 @@
-
-#include "ClapTrap.hpp"
-
-Cl
