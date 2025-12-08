@@ -1,6 +1,8 @@
 
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98 -MMD -MP
+CXXFLAGS = -Wall -Wextra -Werror -pedantic -std=c++98 -MMD -MP -I$(INC)
+
+INC = inc
 
 SRCS = main.cpp ClapTrap.cpp
 OBJDIR = obj

@@ -27,7 +27,7 @@ int main( void )
 		clappa.attack("random");
 		std::cout << '\n';
 	}
-	std::cout << '\n';
+	// std::cout << '\n';
 
 	// ClapTrap clap("Clappy");
 	// std::cout << '\n';
